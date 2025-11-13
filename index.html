@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic button</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div class="container">
+        <button id="magicbtn" onclick="revealMessage()" class="magic-button">click me</button>
+        <span>Ask me anything</span>
+      </div>
+      <script>
+        const messages = [
+          "You are worth it!",
+          "Believe in yourself and all that you are.",
+          "learn how to love yourself more.",
+          "You have to risk a heartbreak to love.",
+          "you have to risk failure to succeed.",
+          "Never fight a bad habit.",
+          "The best way out is always through.",
+          "Tough times never last but tough people do.",
+          "You are stronger than you think.",
+          "get out of you head and into your heart.",
+          "Your heart knows the answers your mind is afraid to find.",
+          "just give them a chance they might prove you wrong.",
+          "Sometimes the wrong choices bring us to the right places.",  
+          "Go on that date it wont hurt knowing them better.",
+        ];
+        function revealMessage() {
+          const ball = document.getElementById('magicbtn');
+        const message =messages[Math.floor(Math.random()*messages.length)]; document.getElementById("magicbtn").innerHTML = message; 
+       
+      
+      
+         ball.textContent = message;
+
+                
+        setTimeout(() => {
+          ball.textContent = 'click me';
+        }, 4000);
+        
+      
+      
+      }
+
+      
+        
+   
+        
+      </script>
+    </body>
+</html>
